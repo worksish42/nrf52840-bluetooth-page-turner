@@ -14,6 +14,8 @@ The page turner automatically enters deep sleep after 10 minutes of inactivity a
 - Automatic deep sleep after 10 minutes
 - Wake from deep sleep with any button
 - Automatic Bluetooth reconnection
+- Customizable Bluetooth device name
+- Customizable sleep timeout
 - CircuitPython
 
 ## Hardware
@@ -51,25 +53,51 @@ Then copy `code.py` to the root of `CIRCUITPY`.
 
 The device will advertise as a Bluetooth HID keyboard and can then be paired with a Kindle or another compatible device.
 
-## Bluetooth Device Name
+## Customization
 
-By default, the device appears as `BT page turner`.
+### Bluetooth Device Name
 
-You can change the Bluetooth name to anything you like by editing this line in `code.py`:
+By default, the device appears as:
 
 ```python
 DEVICE_NAME = "BT page turner"
-## Deep Sleep
+```
 
-After 10 minutes without a button press, the page turner enters deep sleep:
+You can change the Bluetooth name to anything you like by editing this line in `code.py`.
+
+For example:
+
+```python
+DEVICE_NAME = "Bob"
+```
+
+### Sleep Timeout
+
+By default, the page turner enters deep sleep after 10 minutes without a button press:
 
 ```python
 SLEEP_AFTER = 600
 ```
 
-Pressing any of the three buttons wakes the board.
+The value is in seconds, so you can change it to any timeout you prefer.
 
-The timeout can be changed in `code.py`.
+For example, for 5 minutes:
+
+```python
+SLEEP_AFTER = 300
+```
+
+Pressing any of the three buttons wakes the board from deep sleep.
+
+### Button Pins and Keys
+
+The GPIO pins and HID keys can also be changed in `code.py` if you use a different board or want different button functions.
+
+This build uses:
+
+- `P0_20` → Left Arrow
+- `P1_00` → Enter
+- `P1_06` → Right Arrow
 
 ## Bluetooth Troubleshooting
 
