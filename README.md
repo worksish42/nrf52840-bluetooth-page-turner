@@ -1,6 +1,6 @@
 # nRF52840 Bluetooth Page Turner
 
-![Three-button Bluetooth page turner](bob-page-turner.jpg)
+<img src="bob-page-turner.jpg" alt="Bob Bluetooth Page Turner" width="400">
 
 A three-button Bluetooth page turner built with an nRF52840 board and CircuitPython.
 
