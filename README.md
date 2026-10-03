@@ -1,5 +1,7 @@
 # nRF52840 Bluetooth Page Turner
 
+![Three-button Bluetooth page turner](bob-page-turner.jpg)
+
 A three-button Bluetooth page turner built with an nRF52840 board and CircuitPython.
 
 I originally built this for my jailbroken Kindle, based on a Bluetooth Page Turner project on MakerWorld. I used a different nRF52840 board that was easier to find in Europe and added a third button, so I adapted the pin mapping and firmware for my build.
