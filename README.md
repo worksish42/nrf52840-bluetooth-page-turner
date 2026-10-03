@@ -51,6 +51,14 @@ Then copy `code.py` to the root of `CIRCUITPY`.
 
 The device will advertise as a Bluetooth HID keyboard and can then be paired with a Kindle or another compatible device.
 
+## Bluetooth Device Name
+
+By default, the device appears as `BT page turner`.
+
+You can change the Bluetooth name to anything you like by editing this line in `code.py`:
+
+```python
+DEVICE_NAME = "BT page turner"
 ## Deep Sleep
 
 After 10 minutes without a button press, the page turner enters deep sleep:
